@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+}
+
+/* navbar */
+
+.nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #828282;
+}
+
+.navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    color: #fff;
+    margin-top: 4vh;
+    cursor: pointer;
+
+}
+
+.ver-carrito {
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+}
+
+/* estilo de banner */
+.c-item {
+    height: 480px;
+  }
+  
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
