@@ -159,6 +159,13 @@ body {
     text-align: center;
     padding-top:  20px;
 }
+
+.cantidadModal{
+    font-size: 18px;
+    padding: 2px;
+    text-align: center;
+    padding-top:  20px;
+}
 .total-content {
     font-size: 25px;
     padding: 20px;
@@ -170,4 +177,18 @@ body {
 
 .borrar-producto {
     cursor: pointer;
+}
+
+/* contador carrito  */
+
+.cantidad-carrito {
+    background-color: #e40000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 5px;
+    top: 3px;
+    right: 14px;
+    position: absolute;
+    display: none;
 }

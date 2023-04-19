@@ -28,6 +28,7 @@ const llenarCarrito = () => {
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p class="precioModal">$${product.precio}</p>
+        <p class="cantidadModal">Cantidad: ${product.cantidad} </p>
         `;
         
         modalContainer.append(carritoContent);
@@ -44,7 +45,7 @@ const llenarCarrito = () => {
 
 
     
-    const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+    const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
     
     const totalComprado = document.createElement("div");
     totalComprado.ClassName = "total-content";
@@ -66,3 +67,10 @@ const eliminarProducto = () => {
 
   llenarCarrito();
 };
+
+const contadorCarrito = () => {
+    cantidadCarrito.style.display = "block";
+    cantidadCarrito.innerText = carrito.length;
+
+};
+
