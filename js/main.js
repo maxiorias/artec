@@ -1,68 +1,9 @@
 const seccionShop = document.getElementById("seccionShop");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modalContainer");
 
-const productos = [{
-        id: 1,
-        nombre: "NOTEBOOK LENOVO IDEAPAD 3 14IML05 I5 10210U 8GB SSD 256GB 14 W11",
-        precio: 309990,
-        img: "https://www.venex.com.ar/products_images/1673621998_lenovo.jpg",
-    },
-    {
-        id: 2,
-        nombre: "NOTEBOOK CX 30382 I7 1165G7 8GB SSD 240GB 15.6 FREE",
-        precio: 289990,
-        img: "https://www.venex.com.ar/products_images/1678122171_i7-240.jpg",
-    },
-    {
-        id: 3,
-        nombre: "NOTEBOOK LENOVO V15 PENTIUM N5030 4GB 1TB 15.6",
-        precio: 179999,
-        img: "https://www.venex.com.ar/products_images/1605283384_notebooklenovov15pentiumn50304gb1tb15.6.jpg",
-    },
-    {
-        id: 4,
-        nombre: "NOTEBOOK APPLE MACBOOK PRO M1 13 8GB 512GB SPACE GREY",
-        precio: 849990,
-        img: "https://www.venex.com.ar/products_images/1647543406_mac.jpg",
-    },
-    {
-        id: 5,
-        nombre: "NOTEBOOK BANGHO BES T4 INTEL CORE I5 1021U 8GB SSD 240GB 14 FREE",
-        precio: 503984,
-        img: "https://www.venex.com.ar/products_images/1664995442_cuca.jpg",
-    },
-    {
-        id: 6,
-        nombre: "PC INTEL I3 12100 8GB SSD 240GB + MONITOR 22",
-        precio: 254089,
-        img: "https://www.venex.com.ar/products_images/1655151387_pc-intel-i3-12100-8gb-ssd-240gb-+-monitor-22.jpg",
-    },
-    {
-        id: 7,
-        nombre: "PC AMD RYZEN 5 5600G 16GB SSD 240GB",
-        precio: 194029,
-        img: "https://www.venex.com.ar/products_images/1659379310_1656441054_ew.jpg",
-    },
-    {
-        id: 8,
-        nombre: "PC INTEL I5 12400 SSD 240GB 16GB",
-        precio: 230989,
-        img: "https://www.venex.com.ar/products_images/1655151222_pc-intel-i5-12400-ssd-240gb-16gb.jpg",
-    },
-    {
-        id: 9,
-        nombre: "PC INTEL I7 10700 SSD 240GB 8GB",
-        precio: 265639,
-        img: "https://www.venex.com.ar/products_images/1659975171_fsdfsd.png",
-    },
-    {
-        id: 10,
-        nombre: "PC INTEL GAMER KAIROS I5 10400F 16GB SSD 240GB GTX 1660TI 6GB",
-        precio: 415349,
-        img: "https://www.venex.com.ar/products_images/1678893558_pc3.png"
-    },
-]
 
-let carrito =[];
+let carrito = [];
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -79,6 +20,54 @@ productos.forEach((product) => {
     let comprar = document.createElement("button")
     comprar.innerText = "comprar";
     comprar.className = "comprar";
-    
+
     content.append(comprar);
+
+
+    comprar.addEventListener("click", () => {
+        carrito.push({
+            id: product.id,
+            img: product.img,
+            nombre: product.nombre,
+            precio: product.precio,
+        });
+        console.log(carrito);
+    });
+});
+
+verCarrito.addEventListener("click", () => {
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modalHeader.innerHTML = `
+    <h1 class="modal-header-title">Carrito.</h1>
+   `;
+
+    modalContainer.append(modalHeader);
+
+    const modalButton = document.createElement("h3")
+    modalButton.innerText = "x";
+    modalButton.className = "modal-header-button";
+
+    modalHeader.append(modalButton);
+
+
+    carrito.forEach((product) => {
+        let carritoContent = document.createElement("div");
+        carritoContent.className = "modal-content";
+        carritoContent.innerHTML = `
+     <img src="${product.img}">
+     <h3>${product.nombre}</h3>
+     <p>$${product.precio}</p>
+   `;
+
+        modalContainer.append(carritoContent);
+
+    });
+
+    const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+    
+    const totalComprado = document.createElement("div");
+    totalComprado.ClassName = "total-contenido";
+    totalComprado.innerHTML = `total a pagar: $ ${total}`;
+    modalContainer.append(totalComprado);
 });
