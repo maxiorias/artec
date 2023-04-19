@@ -13,7 +13,7 @@ body {
 .navbar{
     display: flex;
     justify-content: space-between;
-    height: 12vh;
+    height: 6vh;
     background-color: #828282;
 }
 
@@ -21,7 +21,7 @@ body {
     justify-self: start;
     margin-left: 20px;
     color: #fff;
-    margin-top: 4vh;
+    margin-bottom: 4vh;
     cursor: pointer;
 
 }
@@ -29,7 +29,7 @@ body {
 .ver-carrito {
     font-size: 25px;
     margin-right: 20px;
-    margin-top: 3.5vh;
+    margin-bottom: 4.5vh;
     cursor: pointer;
 }
 
@@ -43,3 +43,48 @@ body {
     object-fit: cover;
     filter: brightness(0.6);
   }
+
+  /* estilos de tarjetas */
+
+.seccion-shop {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.tarjeta{
+    box-shadow: 0 4px 8 px 0 rgba(0, 0, 0, 0.5);
+    max-width: 375px;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+.tarjeta > h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.tarjeta > img {
+    width: 90%;
+    height: 250px;
+}
+
+.precio {
+    color: #828282;
+    font-size: 22px;
+    padding-top: 12px;
+
+}
+
+.tarjeta button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color:#fff;
+    background-color: #000;
+    border-radius: 10%;
+    
+}
