@@ -57,7 +57,7 @@ verCarrito.addEventListener("click", () => {
         carritoContent.innerHTML = `
      <img src="${product.img}">
      <h3>${product.nombre}</h3>
-     <p>$${product.precio}</p>
+     <p class="precioModal">$${product.precio}</p>
    `;
 
         modalContainer.append(carritoContent);
@@ -67,7 +67,7 @@ verCarrito.addEventListener("click", () => {
     const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
     
     const totalComprado = document.createElement("div");
-    totalComprado.ClassName = "total-contenido";
-    totalComprado.innerHTML = `total a pagar: $ ${total}`;
+    totalComprado.ClassName = "total-content";
+    totalComprado.innerHTML = ` <h3>total a pagar: $ ${total}</h3>`;
     modalContainer.append(totalComprado);
 });

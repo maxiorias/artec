@@ -137,12 +137,13 @@ body {
     cursor: pointer;
 }
 
+
 .modal-container > .modal-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 90%;
     margin: 10px;
 }
 
@@ -151,6 +152,12 @@ body {
     width: 120px;
 }
 
+.precioModal {
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    padding-top:  20px;
+}
 .total-content {
     font-size: 25px;
     padding: 20px;
