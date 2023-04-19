@@ -1,12 +1,12 @@
 const productos = [{
     id: 1,
-    nombre: "NOTEBOOK LENOVO IDEAPAD 3 14IML05 I5 10210U 8GB SSD 256GB 14 W11",
+    nombre: "NOTEBOOK LENOVO IDEAPAD 3 14IML05 I5 10210U",
     precio: 309990,
     img: "https://www.venex.com.ar/products_images/1673621998_lenovo.jpg",
 },
 {
     id: 2,
-    nombre: "NOTEBOOK CX 30382 I7 1165G7 8GB SSD 240GB 15.6 FREE",
+    nombre: "NOTEBOOK CX 30382 I7 1165G7 8GB SSD 240GB 15.6",
     precio: 289990,
     img: "https://www.venex.com.ar/products_images/1678122171_i7-240.jpg",
 },
@@ -18,13 +18,13 @@ const productos = [{
 },
 {
     id: 4,
-    nombre: "NOTEBOOK APPLE MACBOOK PRO M1 13 8GB 512GB SPACE GREY",
+    nombre: "NOTEBOOK APPLE MACBOOK PRO M1 13 8GB",
     precio: 849990,
     img: "https://www.venex.com.ar/products_images/1647543406_mac.jpg",
 },
 {
     id: 5,
-    nombre: "NOTEBOOK BANGHO BES T4 INTEL CORE I5 1021U 8GB SSD 240GB 14 FREE",
+    nombre: "NOTEBOOK BANGHO BES T4 INTEL CORE I5 1021U 8GB ",
     precio: 503984,
     img: "https://www.venex.com.ar/products_images/1664995442_cuca.jpg",
 },
@@ -54,7 +54,7 @@ const productos = [{
 },
 {
     id: 10,
-    nombre: "PC INTEL GAMER KAIROS I5 10400F 16GB SSD 240GB GTX 1660TI 6GB",
+    nombre: "PC INTEL GAMER KAIROS I5 10400F 16GB SSD 240GB",
     precio: 415349,
     img: "https://www.venex.com.ar/products_images/1678893558_pc3.png"
 },
