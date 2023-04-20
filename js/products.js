@@ -68,5 +68,19 @@ const productos = [{
         precio: 415349,
         img: "https://www.venex.com.ar/products_images/1678893558_pc3.png",
         cantidad: 1,
+    },
+    {
+        id: 11,
+        nombre: "Disco solido SSD 480gb",
+        precio: 18900,
+        img: "https://www.venex.com.ar/products_images/1585751936_ssd_480gb_kingston_a400.jpg",
+        cantidad: 1,
+    },
+    {
+        id: 12,
+        nombre: "DISCO SOLIDO SSD 500GB KINGSTON FURY RENEGADE M2",
+        precio: 41539,
+        img: "https://www.venex.com.ar/products_images/1649440719_1648646765_254634drgfebdfe.jpg",
+        cantidad: 1,
     }
 ]
