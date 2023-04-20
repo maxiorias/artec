@@ -4,7 +4,7 @@ const modalContainer = document.getElementById("modalContainer");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -27,26 +27,33 @@ productos.forEach((product) => {
 
     comprar.addEventListener("click", () => {
 
-     const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);   
-     
-     if(repeat){
-        carrito.map((prod) => {
-            if (prod.id === product.id){
-                prod.cantidad++;
-            }
-        });
-     } else { 
-         carrito.push({
-             id: product.id,
-             img: product.img,
-             nombre: product.nombre,
-             precio: product.precio,
-             cantidad: product.cantidad,
+        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+
+        if (repeat) {
+            carrito.map((prod) => {
+                if (prod.id === product.id) {
+                    prod.cantidad++;
+                }
+            });
+        } else {
+            carrito.push({
+                id: product.id,
+                img: product.img,
+                nombre: product.nombre,
+                precio: product.precio,
+                cantidad: product.cantidad,
             });
         }
         console.log(carrito);
+        console.log(carrito.length);
         contadorCarrito();
+        saveLocal();
     });
 });
+
+const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
 
 

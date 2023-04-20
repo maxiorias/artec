@@ -179,6 +179,10 @@ body {
     cursor: pointer;
 }
 
+.fa-trash:hover:before{
+    color: #e40000;
+}
+
 /* contador carrito  */
 
 .cantidad-carrito {
@@ -191,4 +195,18 @@ body {
     right: 14px;
     position: absolute;
     display: none;
+}
+
+/* botones de suma y resta de cantidad en modal  */
+
+.sumar {
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+}
+.restar {
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    
 }
