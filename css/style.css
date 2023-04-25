@@ -104,7 +104,6 @@ body {
 /* estilos del modal  */
 
 
-
 .modal-container {
     display: flex;
     width: 80%;
@@ -114,11 +113,11 @@ body {
     background-color: #828282;
     flex-direction: column;
     align-items: center;
-    position: fixed;
+    position: fixed; 
     overflow: auto;
     z-index: 9;
     top: 12vh;
-    scrollbar-color: none;
+    scrollbar-color: none; 
 }
 
 .modal-container::-webkit-scrollbar {
@@ -144,7 +143,7 @@ body {
 }
 
 
-.modal-container>.modal-content {
+ .modal-container>.modal-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -152,8 +151,8 @@ body {
     width: 90%;
     margin: 10px;
 
-  
-}
+   
+} 
 
 .modal-container>div>img {
     height: 120px;
@@ -189,7 +188,7 @@ body {
       flex-wrap: wrap;
       width: 100%;
       margin: 0;
-      min-height: 88vh;
+     
     }
   
     .modal-container > .modal-content {
@@ -198,6 +197,7 @@ body {
       margin: 2px;
     }
 
+  
   
     .modal-container > div > img {
       height: 80px;
@@ -208,7 +208,7 @@ body {
         display: none;
     }
   }
-  
+
   @media only screen and (max-width: 360px) {
     
 
@@ -231,12 +231,13 @@ body {
         height: 230px;
     }
     
+    
     .modal-container {
       display: flex;
-      flex-wrap: wrap;   
+      flex-wrap: wrap;  
       width: 100%;
       margin: 0;
-      min-height: 88vh; 
+      
     }
   
     .modal-container > .modal-content {
