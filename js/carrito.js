@@ -26,7 +26,7 @@ const llenarCarrito = () => {
         carritoContent.className = "modal-content";
         carritoContent.innerHTML = `
         <img src="${product.img}">
-        <h3>${product.nombre}</h3>
+        <h3 class="modalNombre">${product.nombre}</h3>
         <p class="precioModal">$${product.precio}</p>
         <span class="restar"> - </span>
         <p class="cantidadModal">Cantidad: ${product.cantidad} </p>
